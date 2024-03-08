@@ -17,6 +17,8 @@ db_ingredient.logger = _logs
 def cfg():
     db_url = DB_URL
 
+
+# call two sql functions from pandas
 @db_ingredient.capture
 def df_to_sql(df, table_name, db_url=DB_URL, schema = None, if_exists = 'append'):
     '''Convenience function to interface with db.'''

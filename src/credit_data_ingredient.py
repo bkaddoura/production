@@ -1,3 +1,4 @@
+# will take care of your data
 import pandas as pd
 from sacred import Ingredient
 import os
@@ -8,8 +9,10 @@ _logs = get_logger(__name__)
 
 data_ingredient = Ingredient('data_ingredient')
 
+#  logs in a specific format
 data_ingredient.logger = _logs
 
+# will be availabe in the ingredient with any captured function
 @data_ingredient.config
 def cfg():
     ft_file = os.getenv("CREDIT_DATA")
@@ -21,6 +24,8 @@ def get_data(ft_file = os.getenv("CREDIT_DATA")):
     df_raw = pd.read_csv(ft_file)
     return df_raw
 
+# log every, preprocessed data
+# 
 @data_ingredient.capture
 def process_data(df_raw):
     '''Update data names, add features, and remove unwanted columns.'''
@@ -45,6 +50,7 @@ def process_data(df_raw):
     )
     return df
 
+# loading raw data and sending to processed data and returnign x and y
 @data_ingredient.capture
 def load_data():
     '''Load data and return X, Y'''

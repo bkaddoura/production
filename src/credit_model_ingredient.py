@@ -14,6 +14,8 @@ model_ingredient.logger = _logs
 def cfg():
     pass
 
+# take a model name, if naive bayes, will be embedding
+# loading only if I need them to save on memory
 
 @model_ingredient.capture
 def get_model(model):
@@ -39,6 +41,9 @@ def get_model(model):
     else:
         return None
 
+
+# using /config directory will contain JSON with detailed parameter grid
+# 
 def get_param_grid(model):
     '''
     Given a name, return a parameter grid. Param grids are stored in json files.
@@ -54,6 +59,10 @@ def get_param_grid(model):
     if model == 'NeuralNet':
         file = os.getenv("NEURAL_NET_PG")
 
+# open and load
+        # will return a python dictionary
+        # will control provision 'model' and grid
+        # experiment configuration goes to config folder
     if file is not None:
         with open(file) as f:
             return json.load(f)

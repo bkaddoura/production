@@ -10,7 +10,7 @@ author: Jesús Calderón
 
 ::::::{.columns}
 :::{.column}
-
+If planning to persue a career in Data Science or managaing Data Scientiest.
 **8.1. Infrastructure for ML**
 
 + Infrastructure
@@ -41,8 +41,12 @@ author: Jesús Calderón
 + Infrastructure is the set of fundamental facilities that support the development and maintenance of ML systems.
 + Four layers can, at least, be considered:
 
+
     - Storage and compute: data is collected and stored in the storage layer. Using the compute layer, we run the ML workloads (training, feature generation, etc.)
+Airflow. Baxter. Datafactory Azure. Luigi by Spotify. Everything moved in production should be automated and test. 
     - Resource management:  schedule and orchestrate workloads. 
+
+A little more commodotized. Are you going to using Docker Apps and send to cloud? Or use ML Kitchen? How will be deploy so we can monitor?
     - ML Platform: tools to aid the development of ML applications like model stores, feature stores, and monitoring tools.
     - Development environment: where code is written and experiments are run.
 
@@ -71,6 +75,8 @@ author: Jesús Calderón
 :::{.column}
 
 + Compute layer can be sliced into smaller compute units: instead of a large job, some jobs can be partitioned and computed with a distributed cluster of processors.
+
+Differentiate between pets and cattle. Close to pets and distance from cattle.
 + Compute can be permanent or ephemeral: 
 
     - Training has spiky compute requirements that tend to be ephemeral.
@@ -109,7 +115,7 @@ author: Jesús Calderón
 
 
 ## Resource Management
-
+DIRECTED ACYCLICAL GRAPH will state the sequence of steps and decisions that the ochestrator will may and send to queues.
 ::::::{.columns}
 :::{.column}
 
@@ -132,18 +138,18 @@ author: Jesús Calderón
 # The Human Side of ML
 
 ## Roles, Tasks, and Skills
-
+Hiring a data science team, who do you hire?
 ::::::{.columns}
 :::{.column}
 
 + CDO/DS Leader: 
-
+Build the ship and direct the ship. Someone with a vision with some technical abilities. Need to understand before directing. need to negotiate priorites nad objectives. 
     - Bridges the gap between business and datas science.
     - Defines the vision and technical lead. 
     - Skills: leadership, design thinking, data science/ML, domain experience.
 
 + Data engineer:
-
+Can work with and bring data. Can operate SQL, Hadoop, Spark, Hive
     - Implement, test, and maintain infrastructural components for data management.
     - Define data models and systems architecture.
     - Skills: SQL/NoSQL, Hive/Pig/HDFS, Python, Scala/Spark.
@@ -153,12 +159,14 @@ author: Jesús Calderón
 
 + Analyst:
 
+Good with PowerBI, Tableau, Jupyter. Need direction to avoid traps. Want Deep Learnign but needs to do this first.
     - Collects, cleans, transforms data.
     - Interprets analytical results, reports and communicates.
     - Skills: R, Python, SQL, BI Tools.
 
 + Visualization Engineer
 
+Not easy. Discipline on to itself. Of quantiative data is a science. Edward Tufte author - Visual Explanations / Visual Display Quantitative Information for techniques. Be honest with visualization leading peeple to something that is not there. 
     - Makes sense of data and analysis output by showing it in the right context.
     - Articulate business problems and display solutions with data.
     - Skills: design thinking, BI Tools, presentation and writing.
@@ -204,6 +212,10 @@ author: Jesús Calderón
 
 ## Where to Focus Our Efforts?
 
+MOST IMPORTANT SLIDE
+Tools in Training and Authroing are well offered; these are data science tools; well populated in industry
+Serving and Deploy: not that well served; focus on areas neglected that are not off the shelf
+Data Management: this sector needs focus. So much datasets. Most of time spent.If you know SQL well you will always have a job.
 ::::::{.columns}
 :::{.column}
 

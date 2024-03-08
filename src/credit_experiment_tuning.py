@@ -11,10 +11,12 @@ from dotenv import load_dotenv
 
 from logger import get_logger
 
-
+# from preproc will load ingredient and preprocess fucntion
 from credit_preproc_ingredient import preproc_ingredient, get_column_transformer
 from credit_data_ingredient import data_ingredient, load_data
+#w ill get function to store to database
 from credit_db_ingredient import db_ingredient, df_to_sql
+# get model and param grid
 from credit_model_ingredient import model_ingredient, get_model, get_param_grid
 load_dotenv()
 
@@ -40,6 +42,8 @@ def cfg():
     refit='neg_log_loss'
 
 
+# get a pipeline
+    # store model and store to pipeline
 @ex.capture
 def get_pipe(preprocessing, model):
     '''
@@ -57,6 +61,7 @@ def get_pipe(preprocessing, model):
     return pipe
 
 
+# results of grid search results and best estimators we get
 @ex.capture
 def grid_search(pipe, param_grid, X, Y, folds, scoring, refit):
     '''Perform grid search on a pipeline given a parameter grid and data.'''
@@ -84,6 +89,9 @@ def res_to_sql(res, model, preprocessing, _run):
               table_name = f"model_tuning_cv_{model}",
               if_exists = 'append')
 
+
+# saving to pickle
+    # The pickle function
 @ex.capture
 def pickle_model_artifact(pipe, model, preprocessing, _run):
     '''
@@ -102,12 +110,22 @@ def pickle_model_artifact(pipe, model, preprocessing, _run):
     with open(outpath, 'wb') as f:
         pickle.dump(pipe, f)
     # Add artifact to experiment run
+        # python will serialize our model. something resembling a long string. a pickle. 
+        # The pythonic way. can you Arrow but this is typical. 
+        # Then ask sacred to add registry for that file.
+        # Found in artifacts
     _run.add_artifact(outpath)
     
     _logs.info(f'Pickled model artifact to {outpath}')
     
 
-
+# not using automain, just main, if you use automoat dont need __main__
+    # load data
+    # get pipeline
+    # get param grid
+    # if  not empty then get data
+    # perform search
+    # when have the best results will call sql and pickle
 @ex.main
 def run(preprocessing, model):
     '''Main function: runs the experiment.'''

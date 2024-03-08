@@ -1,3 +1,10 @@
+# for new users, take form Jupyter notebooks into this class we can call
+# left some static method for use, state doesn't get mutated
+# date doesn't change with our class, stay immutable, when put at rest then can become mutable
+# static method have nothign to do with class, they take data into and output standard stuff
+# it will change with the funciton
+
+
 import dask.dataframe as dd
 import pandas as pd
 import numpy as np

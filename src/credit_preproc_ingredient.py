@@ -1,3 +1,4 @@
+
 import pandas as pd
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
@@ -12,6 +13,7 @@ preproc_ingredient = Ingredient('preproc_ingredient')
 
 preproc_ingredient.logger = _logs
 
+#define configuration, without and with transformation
 @preproc_ingredient.config
 def cfg():
     '''
@@ -27,6 +29,7 @@ def cfg():
     remainder = "passthrough"
 
 
+# standard and power transform pipelines
 @preproc_ingredient.capture
 def get_column_transformer(preproc_pipe, num_not_transform, num_transform, remainder):
     '''
