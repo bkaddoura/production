@@ -220,3 +220,82 @@ Simplest batch predictions.
 
 + Agrawal, A. et al. "Cloudy with a high chance of DBMS: A 10-year prediction for Enterprise-Grade ML." arXiv preprint arXiv:1909.00084 (2019).
 + Huyen, Chip. "Designing machine learning systems." O'Reilly Media, Inc.(2021).
+
+
+:::
+::::::
+
+
+## Quiz
+
+Quiz 6 - Model Deployment
+Question Title
+1. Model deployment and model training are the same thing.
+
+True
+
+False
+Question Title
+2. Model deployment can include (select one):
+
+Serving predictions to a live application which have been saved in a database.
+
+Serving predictions to a live application based on streaming data.
+
+Storing predictions in a database.
+
+All answers are correct.
+Question Title
+3. Data scientists should never engage with model users to avoid biases in their modelling decisions.
+
+True
+
+False
+Question Title
+4. Model performance can vary because (select all that apply):
+
+Changes in the distribution of data.
+
+Changes in the technology used to implement the model.
+
+Model performance does not generally vary.
+Question Title
+5. Production infrastructure should support only a few models.
+
+True
+
+False
+Question Title
+6. The difference between online and batch prediction is that batch prediction cannot be used on internet-based applications.
+
+True
+
+False
+Question Title
+7. Pre-trained models can be stored in binary files. A common format used to do this in python is:
+
+Zip archives (.zip)
+
+Pickle file format (.pkl)
+
+Parquet files (.parquet)
+
+Executable files (.exe)
+Question Title
+8. In model deployment, "throwing the model over the fence" is the best approach. This means that once the data scientist's work is done and the model delivered to the product owner, the data scientist is only again involved when the model requires retraining.
+
+True
+
+False
+Question Title
+9. Showing your model results in a BI tool such as PowerBI or Tableau is not really a deployment because the predictions are not dynamically produced whenever the user requests them.
+
+True
+
+False
+Question Title
+10. Model deployment should always be manual so that we can catch errors quickly.
+
+True
+
+False

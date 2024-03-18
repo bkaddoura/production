@@ -591,3 +591,107 @@ $$
 + Huyen, Chip. "Designing machine learning systems." O'Reilly Media, Inc.(2022).
 + Lunderberg and Lee. A Unified Approach to INterpreting Model Predictions. Advances in Nueral INformation Processing Systems 30 (NIPS 2017). [GitHub Repository](https://github.com/shap/shap?tab=readme-ov-file)
 + Molnar, C. Interpretable Machine Learning. (2023) [URL](https://christophm.github.io/interpretable-ml-book/)
+
+:::
+::::::
+
+# Quiz
+
+## Quiz
+
+
+Quiz 4 - Feature Engineering
+Question Title
+1. A majority of use cases in Machine Learning use Deep Learning techniques. Classical ML methods have not been used for a few years now.
+
+True
+
+False
+Question Title
+2. Select all TRUE statements about Feature Engineering.
+
+Feature engineering is a department in data-enabled organizations in charge of creating and maintaining feature pipelines.
+
+Feature engineering is the process of designing efficient storage mechanisms to create features.
+
+It is the process of choosing what information to use and how to extrat this information into a format usable by ML models.
+
+Feature engineering is to transform and represent features so that their information content is best exposed to the learning algorithm.
+Question Title
+3. Which of the following are feature engineering operations? (Select all that apply.)
+
+Reservoir sampling for streaming data
+
+Applying a classification or regression algorithm
+
+Multivariate transformations, including Principal Components Analysis (PCA)
+
+Splines and polynomial transformations
+
+Scaling
+
+Obtaining raw data from a data store
+
+One-hot encoding
+
+Impute missing values
+Question Title
+4. Out of the different types of missing values(Missing Not at Random, Missing At Random, and Missing Completely at Random), which type of missing value carries the least amount of information? (Select one.)
+
+Missing At Random
+
+Missing Not At Random
+
+Missing Completely At Random
+Question Title
+5. Imputation of missing values is the process of:
+
+Deciding which values are incorrect and should be removed.
+
+Completing missing values.
+
+A sub-process embedded in models that can handle missing values.
+Question Title
+6. Discretization and one-hot encoding are examples of:
+
+Variable recoding.
+
+Missing value imputation.
+
+Variable selection.
+Question Title
+7. Word embeddings are a by-product of (select all that apply):
+
+A vectorization procedure.
+
+A prediction problem
+
+A TF-IDF calculation.
+
+Training a Neural Net model
+Question Title
+8. Data leakage is (select all that apply):
+
+All options are incorrect.
+
+The situation when a form of the label leaks into the set of features used for making predictions.
+
+A security incident.
+
+When a model exposes information about its training data.
+Question Title
+9. Is using more features better than using fewer features since our models will generally benefit from using more data?
+
+Yes, more features are always better.
+
+No, more features are not necessarily better.
+Question Title
+10. Explainability methods, including LIME and SHAP, can be applied to:
+
+Any non-linear model.
+
+Any linear model.
+
+Any ensemble model.
+
+Any model.

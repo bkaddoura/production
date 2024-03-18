@@ -412,3 +412,86 @@ author: Jesús Calderón
 + Agrawal, A. et al. "Cloudy with a high chance of DBMS: A 10-year prediction for Enterprise-Grade ML." arXiv preprint arXiv:1909.00084 (2019).
 + Huyen, Chip. "Designing machine learning systems." O'Reilly Media, Inc.(2022).
 + Tetlock and Gardner. Superforecasting: The art and science of prediction. Random House, 2016.
+
+:::
+::::::
+
+# Quiz
+
+## Quiz
+
+Quiz 5 - Model Development
+Question Title
+1. A model's predictive performance is the only consideration we must worry about during model development.
+
+True
+
+False
+Question Title
+2. During the initial stage of model development (select one):
+
+One should create a baseline, which is generally a simple model.
+
+One should always start with the state-of-the-art.
+
+One should consider all possible use cases, all variables, and avoid making simplifying assumptions.
+Question Title
+3. During model development, performance on the training set is irrelevant, and we should not be concerned about it.
+
+True.
+
+False.
+Question Title
+4. Ensemble methods are (select all that apply):
+
+Can only use tree-based learners as base learners.
+
+Commonly used in applications where small performance gains lead to substantial financial gains.
+
+Based on the idea of the "wisdom of the crowds".
+
+Learning methods that combine the outputs of several learners.
+Question Title
+5. Bagging methods (select all that apply):
+
+Aggregate the results of several weak learners, each trained on a different sample.
+
+On average, perform better than the weak learners that are aggregated.
+
+Perform better than all of the weak learners that they aggregate under all conditions.
+
+Use bootstrapped samples, which means that they repeatedly take samples from the training data with substitution.
+Question Title
+6. A boosting algorithm uses bootstrap sampling during learning.
+
+True
+
+False
+Question Title
+7. The"Wisdom of the Crowds" refers to:
+
+An old story from statistics, but its lore is irrelevant in the modern world of machine learning.
+
+An ensemble method.
+
+An error-correction method.
+
+Given a set of predictors, the average prediction performs better, on average, than any of the individual predictors.
+Question Title
+8. AutoML methods are so powerful that one could forego hiring a data scientist.
+
+True
+
+False
+Question Title
+9. Experiment tracking is necessary to maintain good records of all the modelling decisions that we have made, together with their expected outcomes.
+
+True
+
+False
+Question Title
+10. If we change the training data, the resulting machine learning model will be the same, as long as we keep the model's hyperparamters unchanged.
+
+True
+
+False
